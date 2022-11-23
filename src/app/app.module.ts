@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './listar/listar.component';
 import { DetalhesComponent } from './listar/detalhes/detalhes.component';
 import { ListarService } from './listar/listar.service';
+import { CommonModule } from '@angular/common';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
-    DetalhesComponent
+    DetalhesComponent,
+    CadastrarComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ListarService],
   bootstrap: [AppComponent]

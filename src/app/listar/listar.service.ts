@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 export class ListarService {
 
   private computadores: any[] = [
-    {id: 1, marca: 'Marca 01', modelo: 'totm03033', placaMae: 'Asus', memoriaRam: '4gb', hd: '1tb', marcaHd: 'Sea Gate', velProcessador: '8Ghz', foto: 'imagem.jpg'},
-    {id: 2, marca: 'Marca 02', modelo: 'totm03033', placaMae: 'Asus', memoriaRam: '4gb', hd: '1tb', marcaHd: 'Sea Gate', velProcessador: '8Ghz', foto: 'imagem.jpg'},
-    {id: 3, marca: 'Marca 03', modelo: 'totm03033', placaMae: 'Asus', memoriaRam: '4gb', hd: '1tb', marcaHd: 'Sea Gate', velProcessador: '8Ghz', foto: 'imagem.jpg'},
-    {id: 4, marca: 'Marca 04', modelo: 'totm03033', placaMae: 'Asus', memoriaRam: '4gb', hd: '1tb', marcaHd: 'Sea Gate', velProcessador: '8Ghz', foto: 'imagem.jpg'}
+    {id: 1, marca: 'Dell', modelo: 'Inspirion', placaMae: 'Placa-mãe dell', memoriaRam: '10gb', hd: '1tb', marcaHd: 'Kingston', velProcessador: '8Ghz', foto: 'imagem.jpg'},
+    {id: 2, marca: 'Positivo', modelo: 'Motion', placaMae: 'Placa Positivo', memoriaRam: '8gb', hd: '1tb', marcaHd: 'Sea Gate', velProcessador: '6Ghz', foto: 'imagem.jpg'},
+    {id: 3, marca: 'Acer', modelo: 'Aspire 5', placaMae: 'Placa Acer', memoriaRam: '16gb', hd: '2tb', marcaHd: 'Crucial', velProcessador: '10Ghz', foto: 'imagem.jpg'},
+    {id: 4, marca: 'Samsung', modelo: 'Galaxy Book', placaMae: 'Placa-mãe Samsung', memoriaRam: '8gb', hd: '1tb', marcaHd: 'WDG', velProcessador: '8Ghz', foto: 'imagem.jpg'}
   ];
 
   constructor() { }
