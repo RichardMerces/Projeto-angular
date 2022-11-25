@@ -10,10 +10,11 @@ const routes: Routes = [
   { path: 'atualizar/:id', component: AtualizarComponent},
   { path: 'cadastrar', component: CadastrarComponent},
   { path: 'listar', component: ListarComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'listar'}
 ];
 
 @NgModule({
-  imports:[RouterModule.forRoot(routes)],
+  imports:[RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 
