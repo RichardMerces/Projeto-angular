@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.12",
     "bootstrap": "^5.2.3",
+    "guid-typescript": "^1.0.9",
     "jquery": "^3.3.1",
     "ng-bootstrap": "^1.6.3",
     "popper.js": "^1.14.3",

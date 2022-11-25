@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListarService } from './listar.service';
+import { Computadores } from '../interfaces/computadores';
 
 @Component({
   selector: 'app-listar',
@@ -8,12 +8,32 @@ import { ListarService } from './listar.service';
 })
 export class ListarComponent implements OnInit {
 
-  public computadores: any[] = [];
+  compLista: Computadores [];
 
-  constructor(private listarService: ListarService) { }
+  constructor() {
+    this.compLista = [];
+  }
 
   ngOnInit(): void {
-    this.computadores = this.listarService.getComputers();
+    const estoque = localStorage.getItem('pc_db');
+    if(estoque !== null) {
+      this.compLista = JSON.parse(estoque);
+      console.log(this.compLista)
+    }
+  }
+
+  excluir(id: any) {
+    const estoqueAnt = localStorage.getItem('pc_db');
+    if (estoqueAnt !== null) {
+      const pc_db = JSON.parse(estoqueAnt);
+      pc_db.splice(pc_db.findIndex((a: any)=> a.id == id),1);
+      localStorage.setItem('pc_db', JSON.stringify(pc_db));
+    }
+    const estoque = localStorage.getItem('pc_db');
+    if(estoque !== null) {
+      this.compLista = JSON.parse(estoque);
+
+    }
   }
 
 }

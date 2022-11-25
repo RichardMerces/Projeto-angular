@@ -1,19 +1,38 @@
-<div class="container text-center mt-5">
-  <div class="row">
-    <div class="col">
-      <h5>Computadores</h5>
-      <div class="list-group">
-        <a *ngFor="let comp of computadores" class="list-group-item list-group-item-action"
-          [routerLink]="['/listar', comp.id]">
-          {{ comp.marca }} {{ comp.modelo }}
-        </a>
-      </div>
-    </div>
-    <div class="col">
-      <div class="container">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+<div class="card mt-3">
+  <div class="card-header">Lista de Computadores</div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Placa-Mãe</th>
+          <th>Memória Ram</th>
+          <th>HD</th>
+          <th>Marca do HD</th>
+          <th>Velocidade do Processador</th>
+          <th>Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comp of compLista; let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ comp.marca }}</td>
+          <td>{{ comp.modelo }}</td>
+          <td>{{ comp.placaMae }}</td>
+          <td>{{ comp.memoriaRam }}GB</td>
+          <td>{{ comp.hd }}GB</td>
+          <td>{{ comp.marcaHd }}</td>
+          <td>{{ comp.velProcessador }}Ghz</td>
+          <td>{{ comp.foto }}</td>
+          <td class="">
+            <button class="btn btn-sm btn-warning" [routerLink]="['/atualizar', comp.id]" [queryParams]="[comp.id]">Atualizar</button>
+            <button class="btn btn-sm btn-danger" (click)="excluir(comp.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-
+<router-outlet></router-outlet>
